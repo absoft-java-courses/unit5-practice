@@ -83,4 +83,50 @@ public class Employee {
 //    public void setPosition(POSITION position) {
 //        this.position = position;
 //    }
+
+
+    public static class Builder {
+
+        private String firstName; // имя
+        private String lastName; // фамилия
+        private int age; // возраст
+        private String team; // команда
+        private long salary; // зп
+        private POSITION position; // позиция сотрудника
+
+
+        public Builder firstName(String firstName) {
+            this.firstName = firstName;
+            return this;
+        }
+
+        public Builder lastName(String lastName) {
+            this.lastName = lastName;
+            return this;
+        }
+
+        public Builder age(int age) {
+            this.age = age;
+            return this;
+        }
+
+        public Builder team(String team) {
+            this.team = team;
+            return this;
+        }
+
+        public Builder salary(long salary) {
+            this.salary = salary;
+            return this;
+        }
+
+        public Builder position(POSITION position) {
+            this.position = position;
+            return this;
+        }
+
+        public Employee build() {
+            return new Employee(firstName, lastName, age, team, salary, position);
+        }
+    }
 }

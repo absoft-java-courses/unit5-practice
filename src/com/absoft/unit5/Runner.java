@@ -1,7 +1,6 @@
 package com.absoft.unit5;
 
 import com.absoft.unit5.beans.Employee;
-import com.absoft.unit5.beans.EmployeeBuilder;
 import com.absoft.unit5.beans.POSITION;
 
 public class Runner {
@@ -28,7 +27,7 @@ public class Runner {
 //        System.out.println(employee2.getAge());
         System.out.println("==============\n");
 
-        var employee3 = new EmployeeBuilder()
+        var employee3 = new Employee.Builder()
                 .firstName("Sasha")
                 .lastName("Melnik")
                 .salary(1212)
