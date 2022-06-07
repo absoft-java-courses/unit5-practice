@@ -1,6 +1,8 @@
 package com.absoft.unit5;
 
 import com.absoft.unit5.beans.Employee;
+import com.absoft.unit5.beans.EmployeeBuilderFactory;
+import com.absoft.unit5.beans.Intern;
 import com.absoft.unit5.beans.POSITION;
 import com.absoft.unit5.beans.Singleton;
 
@@ -62,6 +64,30 @@ public class Runner {
         System.out.println(singleton1 == singleton2);
         System.out.println(singleton3 == singleton2);
         System.out.println("==============\n");
+
+
+        var employee4 = EmployeeBuilderFactory.INSTANCE.buildEmployeeBuilder()
+                .firstName("Sasha")
+                .lastName("Melnik")
+                .salary(1212)
+                .age(120)
+                .team("AQA")
+                .position(POSITION.JUNIOR)
+                .build();
+
+        var employee5 = EmployeeBuilderFactory.INSTANCE.buildEmployeeBuilder()
+                .firstName("Sasha")
+                .lastName("Melnik")
+                .salary(1212)
+                .age(120)
+                .team("AQA")
+                .position(POSITION.JUNIOR)
+                .build();
+
+        System.out.println(employee4.isIntern());
+        System.out.println(employee5.isIntern());
+        System.out.println("==============\n");
+
 
 
     }
