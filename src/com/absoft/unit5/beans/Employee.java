@@ -2,12 +2,15 @@ package com.absoft.unit5.beans;
 
 public class Employee {
 
-    public String firstName; // имя
-    public String lastName; // фамилия
-    public int age; // возраст
-    public String team; // команда
-    public long salary; // зп
-    public POSITION position; // позиция сотрудника
+    private String firstName; // имя
+    private String lastName; // фамилия
+    private int age; // возраст
+    private String team; // команда
+    private long salary; // зп
+    private POSITION position; // позиция сотрудника
+
+    public Employee() {
+    }
 
     public Employee(String firstName, String lastName, int age, String team, POSITION position){
         this(firstName, lastName, age, team, 0, position);
@@ -32,4 +35,52 @@ public class Employee {
         this.position = position;
     }
 
+
+    public void setFirstName(String firstName1) {
+        firstName = firstName1;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
+
+    public long getSalary() {
+        return salary;
+    }
+
+    public void setSalary(long salary) {
+        this.salary = salary;
+    }
+
+    public POSITION getPosition() {
+        return position;
+    }
+
+    public void setPosition(POSITION position) {
+        this.position = position;
+    }
 }
