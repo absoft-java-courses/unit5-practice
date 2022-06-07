@@ -2,6 +2,7 @@ package com.absoft.unit5;
 
 import com.absoft.unit5.beans.Employee;
 import com.absoft.unit5.beans.POSITION;
+import com.absoft.unit5.beans.Singleton;
 
 public class Runner {
 
@@ -39,6 +40,27 @@ public class Runner {
         System.out.println(employee3.getLastName());
         System.out.println(employee3.getPosition());
         System.out.println(employee3.getAge());
+        System.out.println("==============\n");
+
+
+//        var singleton1 = Singleton.getInstance();
+//        var singleton2 = Singleton.getInstance();
+//        var singleton3 = Singleton.getInstance();
+//
+//        System.out.println(employee1 == employee3);
+//        System.out.println(singleton1 == singleton2);
+//        System.out.println(singleton3 == singleton2);
+//        System.out.println("==============\n");
+
+
+
+        var singleton1 = Singleton.INSTANCE;
+        var singleton2 = Singleton.INSTANCE;
+        var singleton3 = Singleton.INSTANCE;
+
+        System.out.println(employee1 == employee3);
+        System.out.println(singleton1 == singleton2);
+        System.out.println(singleton3 == singleton2);
         System.out.println("==============\n");
 
 
